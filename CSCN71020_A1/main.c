@@ -3,6 +3,7 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
+void subtract();
 
 
 int main() {
@@ -20,6 +21,10 @@ int main() {
 	{
 	case 1:
 		add();
+
+	case 2:
+		subtract();
+		break;
 	}
 
 }
@@ -44,4 +49,14 @@ void add() {
 	scanf("%lf", &num2);
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
+}
+
+void subtract() {
+	double num1, num2, result;
+	printf("Enter the first value:");
+	scanf("%lf", &num1);
+	printf("Enter the second value:");
+	scanf("%lf", &num2);
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
